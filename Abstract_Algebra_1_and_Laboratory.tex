@@ -27,6 +27,7 @@
   \hspace{12pt}
   
   임복희 교수님께서 담당하시는 2021년 1학기 현대대수1및실습 1 분반 안의, Noether 조의 이름으로 작성된 노트 정리입니다.
+  딱딱한 현대대수학을 최대한 쉽게 풀어 쓰고자 노력하였습니다.
 
   \section{1주차 노트 정리}
   \hspace{12pt}
@@ -182,6 +183,30 @@
   즉, 집합 $S' \subseteq S$가 연산 $* : S \times S \to S$에 대하여 닫혀 있을 필요충분조건은
   $$ \left( \forall a \in S' \right) \left( \forall b \in S' \right) \left[ a * b \in S' \right] $$
   가 성립한다는 것입니다.
+
+  이상의 논의로부터 $\left( S^1 , * \right)$가 마그마라는 걸 보이는 것부터 시작해야 되는 걸 알 수 있습니다.
+  그렇게 하기 위하여, 두 원소 $z_1 \in S^1$와 $z_2 \in S^1$를 아무렇게나 골라 봅시다.
+  그렇더라도, $ z_1 z_2 \in \mathbb{C} $이고 $\left| z_1 \right| = \left| z_2 \right| = 1$이어야 하기 때문에,
+  \begin{align*}
+    \left| z_1 \right| \left| z_2 \right| = 1
+    & \implies \left| z_1 z_2 \right| = 1 \\
+    & \implies z_1 z_2 \in S^1
+  \end{align*}
+  입니다.
+  따라서 다음 단계\footnote{$\left( S^1 , * \right)$이 반군임을 증명하기}로 넘어갈 수 있습니다.
+
+  이제 $\left( S^1 , * \right)$이 반군임을 증명해 보겠습니다.
+  우리는 이미 복소수의 곱셈이 결합 법칙을 만족시키는 것을 알고 있습니다.
+  그런데 $S^1$은 $\mathbb{C}$의 부분 집합입니다.
+  그러니까 모든 $a , b , c \in S^1$에 대하여, 
+  \begin{equation*}
+    (a * b) * c = a * (b * c) \tag{6}
+  \end{equation*}
+  이 성립하겠죠?
+  왜냐하면, (6)을 만족시킨다는 것을 검증받아야 될 모든 삼중쌍 $$ \left( a , b , c \right) \in S^1 \times S^1 \times S^1 $$은 다 $\mathbb{C}^{3}$의 원소이므로,
+  복소수의 곱셈의 결합 법칙이 보증 서주기 때문이죠.
+  $*$가 복소수의 곱셈으로부터 유도되었다는 사실을 상기하신다면,
+  쉽게 이해가실 거에요.
 
   \bibliographystyle{unsrt}
 
