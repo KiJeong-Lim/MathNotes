@@ -35,7 +35,7 @@
   전남대학교에서 현대대수1및실습을 수강하셨다면 마땅히 알아야 할 ``군''이라는 낱말의 뜻에 대하여 논하기 위해서는, \underline{이항 구조}(\textit{binary structure})부터 알아야 합니다.
 
   집합 $S$가 이항 구조가 되기 위해서는 \underline{이항 연산}(\textit{binary operator}) $*$을 가져야 합니다.
-  이때 $*$이 이항 연산이라 함\footnote{\cite{fraleigh2009} 20쪽, 정의 2.1 참고}은 그것이
+  이때 $*$이 이항 연산이라 함\footnote{참고 문헌 \cite{fraleigh2009} 20쪽, 정의 2.1 인용}은 그것이
   \begin{enumerate}
     \item[(a)] $S \times S$를 \underline{정의역}(\textit{domain})으로 가지면서
     \item[(b)] $S$를 \underline{공역}(\textit{codomain})를 가져야 하며
@@ -63,16 +63,16 @@
   이때 집합 $S$가 이항 연산 $* : S \times S \to S$을 가지면 순서쌍 $\left( S , * \right)$을 이항 구조라고 부릅니다.
   참고로 ``이항 구조''의 동의어에는 ``\underline{아군}''(\textit{groupoid})와 ``\underline{마그마}''(\textit{magma})가 있습니다.
 
-  마그마 $ \left( S , * \right) $가 \underline{군}\footnote{\cite{fraleigh2009} 37쪽, 정의 4.1 참고}(\textit{group})이 되기 위해서는 다음 세 조건을 만족시켜야 합니다:
+  마그마 $ \left( S , * \right) $가 \underline{군}\footnote{참고 문헌 \cite{fraleigh2009} 37쪽, 정의 4.1 인용}(\textit{group})이 되기 위해서는 다음 세 조건을 만족시켜야 합니다:
   \begin{enumerate}
-    \item \underline{결합 법칙}(\textit{associative law})\footnote{\cite{fraleigh2009} 23쪽, 정의 2.12 참고}:
+    \item \underline{결합 법칙}(\textit{associative law})\footnote{참고 문헌 \cite{fraleigh2009} 23쪽, 정의 2.12 인용}:
     \begin{equation*}
       \left( \forall a \in S \right) \left( \forall b \in S \right) \left( \forall c \in S \right) \left[ \left( a * b \right) * c = a * \left( b * c \right) \right] \tag{1}
     \end{equation*}
     이 논리식은 ``모든 $a , b , c \in S$에 대하여 $\left( a * b \right) * c = a * \left( b * c \right)$이다''라는 뜻을 가지는데,
     이 논리식이 성립할 때 그리고 그럴 때에만 ``$*$이 $S$ 위에서 결합적이다''라고 말합니다.
 
-    \item 항등원\footnote{\cite{fraleigh2009} 32쪽, 정의 3.12 참고}의 존재:
+    \item \underline{항등원}(\textit{identity})\footnote{참고 문헌 \cite{fraleigh2009} 32쪽, 정의 3.12 인용}의 존재:
     적당한 $e \in S$가 존재해서 논리식
     \begin{equation*}
       \left( \forall a \in S \right) \left[ e * a = a * e = a \right] \tag{2}
@@ -80,7 +80,7 @@
     가 성립해야 합니다.
     이때 $e$를 \underline{$*$에 대한 항등원}(\textit{identity element for $*$})이라고 합니다.
     
-    한 가지 주목할 만한 점은 항등원은 많아야 한 개 밖에 존재하지 않는다는 사실입니다.\footnote{\cite{fraleigh2009} 32쪽, 정리 3.13 참고}
+    한 가지 주목할 만한 점은 항등원은 많아야 한 개 밖에 존재하지 않는다는 사실입니다.\footnote{참고 문헌 \cite{fraleigh2009} 32쪽, 정리 3.13 인용}
     이 사실을 증명하기 위해서는 $e_1 \in S$가 
     \begin{equation*}
       \left( \forall a \in S \right) \left[ e_1 * a = a * e_1 = a \right] \tag{2-1}
@@ -102,7 +102,7 @@
       이로써 ($e = e_1$을 보였기 때문에) 증명을 마칠 수 있습니다.
     \end{proof}
 
-    \item \underline{역원}(\textit{inverse})\footnote{\cite{fraleigh2009} 37쪽, 정의 4.1 참고}의 존재:
+    \item \underline{역원}(\textit{inverse})\footnote{참고 문헌 \cite{fraleigh2009} 37쪽, 정의 4.1 인용}의 존재:
     각각의 $a \in S$마다, 어떤 $b \in S$가 존재해서
     \begin{equation*}
       a * b = b * a = e \tag{3}
@@ -136,16 +136,16 @@
   \end{enumerate}
 
   참고로 결합 법칙을 만족시키는 마그마를 \underline{반군}(\textit{semigroup})이라고 하고,
-  항등원이 존재하는 반군을 \underline{모노이드}(\textit{monoid})라고 합니다.\footnote{\cite{fraleigh2009} 42쪽 참고}
+  항등원이 존재하는 반군을 \underline{모노이드}(\textit{monoid})라고 합니다.\footnote{참고 문헌 \cite{fraleigh2009} 42쪽 인용}
 
   또한 ``\underline{아벨 군}''(\textit{abelian group})의 개념을 소개할까 합니다.
   이항 구조 $\left( S , * \right)$가 주어졌을 때,
-  $*$이 \underline{가환}(\textit{commutative})\footnote{\cite{fraleigh2009} 22쪽, 정의 2.11 참고}하다고 함은
+  $*$이 \underline{가환}(\textit{commutative})\footnote{참고 문헌 \cite{fraleigh2009} 22쪽, 정의 2.11 인용}하다고 함은
   \begin{equation*}
     \left( \forall a \in S \right) \left( \forall b \in S \right) \left[ a * b = b * a \right] \tag{4}
   \end{equation*}
   가 성립한다는 뜻인데,
-  $*$이 가환한 군을 아벨 군이라고 부릅니다.\footnote{\cite{fraleigh2009} 38쪽, 정의 4.3 참고}
+  $*$이 가환한 군을 아벨 군이라고 부릅니다.\footnote{참고 문헌 \cite{fraleigh2009} 38쪽, 정의 4.3 인용}
 
   이제 군의 몇 가지 예에 대하여 알아보겠습니다.
 
@@ -155,7 +155,7 @@
     S^1 := \left\{ z \in \mathbb{C} : \left| z \right| = 1 \right\} \tag{5}
   \end{equation*}
   와 같이 두고,
-  복소수의 곱셈으로부터 이항 연산 $* : S^1 \times S^1 \to S^1$을 \underline{유도}(\textit{induce})\footnote{\cite{fraleigh2009} 21쪽, 정의 2.4 참고}하면,
+  복소수의 곱셈으로부터 이항 연산 $* : S^1 \times S^1 \to S^1$을 \underline{유도}(\textit{induce})\footnote{참고 문헌 \cite{fraleigh2009} 21쪽, 정의 2.4 인용}하면,
   $$\left( S^1 , * \right)$$는 군이 됩니다!
   이것이 사실임을 증명할 것인데, 그 전에 다뤄야 할 개념이 있습니다.
 
