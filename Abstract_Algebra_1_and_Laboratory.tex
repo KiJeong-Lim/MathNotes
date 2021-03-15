@@ -65,7 +65,7 @@
   \end{align*}
   와 같이 적을 수 있습니다.
 
-  이때 집합 $S$가 이항 연산 $* : S \times S \to S$을 가지면 순서쌍 $\left( S , * \right)$을 이항 구조라고 부릅니다.
+  이때 공집합이 아닌 집합 $S$가 이항 연산 $* : S \times S \to S$을 가지면 순서쌍 $\left( S , * \right)$을 이항 구조라고 부릅니다.
   참고로 ``이항 구조''의 동의어에는 ``\underline{아군}''(\textit{groupoid})와 ``\underline{마그마}''(\textit{magma})가 있습니다.\footnote{참고 문헌 \cite{fraleigh2009} 38쪽 인용}
 
   마그마 $ \left( S , * \right) $가 \underline{군}\footnote{참고 문헌 \cite{fraleigh2009} 37쪽, 정의 4.1 인용}(\textit{group})이 되기 위해서는 다음 세 조건을 만족시켜야 합니다:
@@ -211,14 +211,14 @@
   이 성립하겠죠?
   왜냐하면, (6)을 만족시킨다는 것을 검증받아야 될 모든 삼중쌍 $$ \left( a , b , c \right) \in S^1 \times S^1 \times S^1 $$들은
   전부 집합 $\mathbb{C} \times \mathbb{C} \times \mathbb{C}$의 원소이므로,
-  복소수의 곱셈의 결합 법칙이 보증 서주기 때문이죠.
+  복소수의 곱셈의 결합 법칙이 보증해 주기 때문이죠.
   $*$가 복소수의 곱셈으로부터 유도되었다는 사실을 상기하신다면,
   쉽게 이해가실 거에요.
 
   이제 $\left( S^1 , * \right)$이 모노이드임을 증명해 보겠습니다.
   $S^1$의 원소들 중 항등원을 하나 찾아서, 그것이 (2)를 만족시킨다는 것을 보이면 충분합니다.
   그런데, 복소수의 곱셈에 대한 항등원인 $1$이 $S^1$에 속해버린 이상, $1$이 $S^1$의 항등원이 되지 않을까요?
-  아까와 같은 이유에 의하여, 답은 ``예''입니다.
+  아까와 같은 이유에 의하여, 더 큰 세상에서 보증 받았으므로, 답은 ``예''입니다.
 
   드디어 $\left( S^1 , * \right)$이 군임을 증명해 보겠습니다.
   그렇기 위해서는, 각 원소 $a \in S^1$마다 어떤 $b \in S^1$가 (3)을 만족시키는 것을 보이면 충분합니다.
@@ -353,10 +353,10 @@
   \end{enumerate}
 
   그런데 $\left( \mathbb{R} , + \right)$은 군으로서 $\left( \mathbb{C} , + \right)$ 안에 들어갈 수 있네요?
-  ``군으로서 안에 들어갈 수 있다''라는 개념을 정의하려면, ``부분군''과 ``군 동형''의 개념부터 알아야 합니다.
+  ``군으로서 안에 들어갈 수 있다''라는 개념을 정의하려면, ``부분군''과 ``군 동형''의 개념이 필요합니다.
 
   먼저 \underline{부분군}(\textit{subgroup})\footnote{참고 문헌 \cite{fraleigh2009} 49쪽, 정의 5.4 인용}에 대하여 알아 보겠습니다.
-  만약 군 $G$의 부분 집합 $H$가 $G$의 이항 연상 아래에 닫혀 있고,
+  만약 군 $G$의 부분 집합 $H$가 $G$의 이항 연산 아래에 닫혀 있고,
   $G$로부터 유도된 연산을 가지는 $H$가 그 자신이 군이면 $H$는 $G$의 부분군이라고 합니다.
   $H$가 $G$의 부분군인 경우, 그 사실을 ``$H \leq G$'' 또는 ``$G \geq H$''라고 적어서 나타냅니다.
 
@@ -368,6 +368,149 @@
   $G$가 군이면 $G$ 자신도 $G$의 부분군입니다.
   $G$를 $G$의 \underline{비진부분군}(\textit{improper subgroup})이라고 합니다.\footnote{참고 문헌 \cite{fraleigh2009} 49쪽, 정의 5.5 인용}
   $G$가 아닌 $G$의 부분군을 가르켜 \underline{진부분군}(\textit{proper subgroup})이라고 부릅니다.\footnote{참고 문헌 \cite{fraleigh2009} 49쪽, 정의 5.5 인용}
+
+  그런데 언제 부분 집합이 부분군이 되는지 생각해 봅시다.
+  그러면 어떠한 군 $ \left( G , * \right) $가 주어지더라도, 임의의 집합 $H \subseteq G$가 $G$의 부분군일 때 그리고 그럴 때에만 다음 조건들이 모두 성립함을 알 수 있습니다:\footnote{참고 문헌 \cite{fraleigh2009} 51쪽, 정의 5.14 인용}
+  \begin{enumerate}
+    \item \underline{$H$가 $G$의 이항 연산 아래에 닫혀 있다.}
+    다시 말해, 논리식
+    \begin{equation}
+      \left( \forall a \in H \right) \left( \forall b \in H \right) \left[ a * b \in H \right] \tag{7}
+    \end{equation}
+    가 성립한다는 뜻입니다.
+    \item \underline{$G$의 항등원이 $H$에 속한다.}
+    다시 말해, 논리식
+    \begin{equation}
+      e \in H \tag{8}
+    \end{equation}
+    가 성립한다는 뜻입니다.
+    \item \underline{각 $a \in H$에 대하여, $a$의 역원이 $H$에 속한다.}
+    다시 말해, 논리식
+    \begin{equation}
+      \left( \forall a \in H \right) \left( \exists b \in H \right) \left[ a * b = b * a = e \right] \tag{9}
+    \end{equation}
+    가 성립한다는 뜻입니다.
+  \end{enumerate}
+
+  \begin{proof}
+    먼저, 파트 (a)에서 필요한 보조 정리를 하나 증명하고;
+    그 다음, 파트 (b)에서 $H \leq G$이 성립한다고 가정한 뒤 조건 1, 2, 3이 성립함을 보이고;
+    마지막으로, 파트 (c)에서 조건 1, 2, 3이 성립한다고 가정한 뒤 $H \leq G$임을 보이겠습니다.
+
+    \begin{itemize}
+      \item[(a)] 군 $\left( G , * \right)$가 주어졌다고 하겠습니다.
+      그러면 임의의 $a \in G$와 임의의 $b \in G$에 대하여 (10)과 (11)이 성립합니다:\footnote{참고 문헌 \cite{fraleigh2009} 40쪽, 정의 4.15 인용}
+      \begin{align*}
+        \left( \exists x \in G \right) \left[ a * x = b \land \left( \forall y \in G \right) \left[ a * y = b \rightarrow x = y \right] \right] \tag{10} \\
+        \left( \exists x \in G \right) \left[ x * a = b \land \left( \forall y \in G \right) \left[ y * a = b \rightarrow x = y \right] \right] \tag{11}
+      \end{align*}
+      다시 말해, $x$에 대한 방정식 $a * x = b$은 유일한 해를 가지고,
+      또 다른 $x$에 대한 방정식 $x * a = b$도 유일한 해를 가진다는 뜻입니다.
+
+      \begin{proof}[Proof of (a)]
+        먼저, (10)이 성립하는 것부터 보이겠습니다.
+        $x := a^{-1} * b$로 두면,
+        \begin{align*}
+          a * x
+          & = a * \left( a^{-1} * b \right) \\
+          & = \left( a * a^{-1} \right) * b \\
+          & = e * b \\
+          & = b
+        \end{align*}
+        이고,
+        $a * y = b$인 임의의 $y \in G$에 대하여,
+        \begin{align*}
+          a * x = b
+          & \implies a * x = a * y \\
+          & \implies a^{-1} * \left( a * x \right) = a^{-1} * \left( a * y \right) \\
+          & \implies \left( a^{-1} * a \right) * x = \left( a^{-1} * a \right) * y \\
+          & \implies e * x = e * y \\
+          & \implies x = y
+        \end{align*}
+        이므로, (10)이 성립함을 알 수 있습니다.
+
+        이제, (11)이 성립함을 보이겠습니다.
+        아까와 비슷하게 $x := b * a^{-1}$로 두면,
+        \begin{align*}
+          x * a
+          & = \left( b * a^{-1} \right) * a \\
+          & = b * \left( a^{-1} * a \right) \\
+          & = b * e \\
+          & = b
+        \end{align*}
+        이고,
+        $y * a = b$인 임의의 $y \in G$에 대하여,
+        \begin{align*}
+          x * a = b
+          & \implies x * a = y * a \\
+          & \implies \left( x * a \right) * a^{-1} = \left( y * a \right) * a^{-1} \\
+          & \implies x * \left( a * a^{-1} \right) = y * \left( a * a^{-1} \right) \\
+          & \implies x * e = y * e \\
+          & \implies x = y
+        \end{align*}
+        이므로, (11)이 성립함을 알 수 있습니다.
+      \end{proof}
+
+      \item[(b)] 먼저 $H \leq G$라고 가정합시다.
+      그러면 $H$는 $G$의 부분군이므로, 부분군의 정의에 의하여,
+      $*$에 대하여 닫혀 있고;
+      $H$ 위에서 $*$의 유도된 이항 연산 $*'$에 대하여, $\left( H , *' \right)$는 그 자체로 군이어야 합니다.
+
+      여기서 $H$가 $*$에 대하여 닫혀 있으므로 조건 1이 성립함을 알 수 있습니다.
+      
+      또한 $H$는 군이기 때문에,
+      공집합이 아니어야 하므로 어떤 $h_0 \in H$가 존재함을 알 수 있고;
+      보조 정리 (a)를 적용하여 어떤 $e' \in H$가 존재하여 $$ h_0 *' e' = h_0 \land \left( \forall h \in H \right) \left[ h_0 *' h = h_0 \rightarrow e' = h \right] $$가 성립함을 알 수 있습니다.
+      이때 보조 정리 (a)를 군 $ \left( G , * \right) $에 적용하면, 어떤 $x \in G$가 $$ h_0 * x = h_0 \land \left( \forall y \in G \right) \left[ h_0 * y = h_0 \rightarrow x = y \right] $$를 만족시킴을 알 수 있는데,
+      $y$에 $G$의 항등원 $e$를 넣음으로써 $x = e$를 얻을 수 있습니다.
+      이제 $y$에 $e'$를 넣으면 $x = e'$가 도출되는데, $e = e' \in H$를 얻게 됩니다.
+      따라서 조건 2가 성립함을 알 수 있습니다.
+      물론, $e$가 $*'$에 대한 항등원임도 쉽게 증명할 수 있습니다.
+      귀뜸만 하자면, 더 큰 군에서도 항등원으로서의 의무를 수행하며 살았는데 걔가 부분군으로 이사 가더라도 여전히 (오히려 더 가벼운) 항등원으로서의 의무를 수행할 수 있다는 말을 증명으로 잘 바꾸면 된다고 말씀드리겠습니다.
+
+      조건 3이 성립함을 보이기에 앞서 주장 [1]을 증명하겠습니다.
+      \begin{enumerate}
+        \item[{주장 [1]:}] $x * y = e$를 만족시키는 임의의 $x \in G$와 $y \in G$에 대하여 $y * x = e$이다.
+      \end{enumerate}
+
+      \begin{proof}[Proof of the claim]
+        $x \in G$와 $y \in G$가 $x * y = e$를 만족시킨다고 가정하겠습니다.
+        이때 $z := y * x$로 두고, $z * z = z$를 보이면 충분합니다.
+        그 까닭은 양변에 $z^{-1}$을 곱하여 $z = e$를 얻을 수 있기 때문입니다.
+        그런데
+        \begin{align*}
+          z * z
+          & = \left( y * x \right) * \left( y * x \right) \\
+          & = y * \left( x * \left( y * x \right) \right) \\
+          & = y * \left( \left( x * y \right) * x \right) \\
+          & = y * \left( e * x \right) \\
+          & = y * x \\
+          & = z
+        \end{align*}
+        가 도출되네요.
+        이로써 주장 [1]의 증명이 끝났습니다.
+      \end{proof}
+      
+      이제 $H$에서 원소 하나를 뽑아 $a$라고 부르겠습니다.
+      그러면 보조 정리 (a)에 의하여 어떤 $b \in H$가 존재하여 $$ a *' b = e \land \left( \forall h \in H \right) \left[ a *' h = e \rightarrow b = h \right]$$가 성립합니다.
+      이제 보조 정리 (a)를 군 $ \left( G , * \right) $에 적용하면, 어떤 $x \in G$가 $$ a * x = e \land \left( \forall y \in G \right) \left[ a * y = e \rightarrow x = y \right] $$를 만족시킴을 알 수 있는데,
+      $y$에 $b$를 넣음으로써 $x = b$를 얻습니다.
+      따라서 $a * b = e$를 얻게 되고, 주장 [1]에 의하여 $b * a = e$를 얻습니다.
+      이로써 조건 3의 증명이 끝났습니다.
+
+      \item[(c)] 이제 $G$의 부분 집합인 $H$가 조건 1, 2, 3을 모두 만족시킨다고 가정하겠습니다.
+      
+      먼저, $H$가 $*$ 아래에 닫혀 있음을 보여야 하는데, 이는 조건 1이 보장합니다.
+
+      이제 $*'$을 $H$ 위에서 $*$의 유도된 이항 연산이라고 하겠습니다.
+      그러면 $\left( H , *' \right)$는 이항 구조가 되는데, 이것이 군임을 보이면 충분합니다.
+      그런데 이는 $S^1$이 군임을 보였던 과정을 반복하여 증명할 수 있습니다.
+    \end{itemize}
+  \end{proof}
+
+  여기서 흥미로운 점들 중 하나는 (거칠게 말하면) 보조 정리 (a)의 역이 성립한다는 사실입니다.
+  정확히 말씀드리자면, 조건 (10)과 (11)을 만족시키는 임의의 반군 $ \left( G , * \right) $은 군입니다.
+  이를 증명하기 앞서 더 재밌는 정리를 증명해 보겠습니다!
 
   \bibliographystyle{unsrt}
 
